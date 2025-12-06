@@ -352,6 +352,7 @@ export default function Header() {
                 open={mobileMenuOpen}
                 onClose={() => setMobileMenuOpen(false)}
                 sx={{
+                    zIndex: (theme) => theme.zIndex.drawer + 2, // ensure it's on top of the sticky header
                     '& .MuiDrawer-paper': {
                         width: 280,
                         backgroundColor: 'background.paper',
