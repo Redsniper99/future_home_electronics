@@ -11,7 +11,7 @@ export default function PromoFlyers() {
     return (
         <Box sx={{ py: { xs: 4, md: 6 } }}>
             <Container maxWidth="lg">
-                {/* 1. Full Width Low Height Banner */}
+                {/* 1. Full Width Strip Banner */}
                 <Box
                     component={Link}
                     href="/products?filter=deals"
@@ -20,7 +20,6 @@ export default function PromoFlyers() {
                         textDecoration: 'none',
                         position: 'relative',
                         width: '100%',
-                        height: { xs: 120, md: 160 }, // Low height
                         borderRadius: { xs: '10px', md: 4 },
                         overflow: 'hidden',
                         mb: 3,
@@ -33,35 +32,15 @@ export default function PromoFlyers() {
                     }}
                 >
                     <Box
+                        component="img"
+                        src="/strip banner.png"
+                        alt="Promo Strip Banner"
                         sx={{
-                            position: 'absolute',
                             width: '100%',
-                            height: '100%',
-                            backgroundImage: 'url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80)',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
+                            height: 'auto',
+                            display: 'block',
                         }}
                     />
-                    <Box
-                        sx={{
-                            position: 'absolute',
-                            width: '100%',
-                            height: '100%',
-                            background: 'linear-gradient(90deg, rgba(78, 205, 196, 0.9) 0%, rgba(85, 98, 112, 0.6) 100%)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            px: { xs: 3, md: 6 },
-                        }}
-                    >
-                        <Box sx={{ color: 'white' }}>
-                            <Typography variant="h4" sx={{ fontWeight: 800, fontSize: { xs: '1.5rem', md: '2rem' } }}>
-                                FLASH SALE
-                            </Typography>
-                            <Typography variant="subtitle1" sx={{ fontWeight: 500, opacity: 0.9 }}>
-                                Up to 50% OFF on select Gaming Gear - Limited Time Only
-                            </Typography>
-                        </Box>
-                    </Box>
                 </Box>
 
                 {/* 2. Row with 3/5 and 2/5 banners */}
